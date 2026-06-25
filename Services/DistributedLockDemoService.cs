@@ -431,7 +431,7 @@ public class DistributedLockDemoService
         var redisConfigured = useRedis && !string.IsNullOrWhiteSpace(redisConnectionString);
 
         lock (_stateLock)
-        {
+        {          
             return new DistributedLockDemoMetricsSnapshot
             {
                 ProviderName = _lockService.GetMetrics().ProviderName,
